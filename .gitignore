@@ -14,3 +14,9 @@ tensorflow/
 www/
 custom_components/
 tts/
+
+.HA_VERSION
+.homekit.state
+.ios.conf
+.uuid
+*.log
