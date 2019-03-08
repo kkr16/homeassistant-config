@@ -1,0 +1,12 @@
+  joanne_homebridge:
+    icon: mdi:home
+    name: Joanne Homebridge Trigger
+  blinds_blocker:                                                
+    icon: mdi:blinds                                            
+    name: Blinds Automation Blocker
+  night_mode:
+    icon: mdi:weather-night
+    name: Night Mode
+  nap_time:
+    icon: mdi:sleep
+    name: Nap time

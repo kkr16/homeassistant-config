@@ -1,0 +1,204 @@
+  - platform: mqtt
+    name: "Garage Door"
+    command_topic: "garage/door/actuator"
+    state_topic: "garage/door/status"
+    qos: 0
+    payload_open: "OPEN"
+    payload_close: "CLOSE"
+    state_open: "open"
+    state_closed: "closed"
+    optimistic: false
+  - platform: template
+    covers:
+      back_door:
+        optimistic: false
+        friendly_name: "Back Door Blind"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.blinds_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.blinds_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.blinds_stop_middle{% else %}switch.blinds_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.blinds_stop_middle 
+      panel_1:
+        optimistic: false
+        friendly_name: "Living Room Left Blind"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.panel1_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.panel1_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.panel1_stop_middle{% else %}switch.panel1_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.panel1_stop_middle 
+      panel_2:
+        optimistic: false
+        friendly_name: "Living Room Middle Blind"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.panel2_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.panel2_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.panel2_stop_middle{% else %}switch.panel2_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.panel2_stop_middle 
+      panel_3:
+        optimistic: false
+        friendly_name: "Living Room Right Blind"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.panel3_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.panel3_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.panel3_stop_middle{% else %}switch.panel3_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.panel3_stop_middle 
+      panel_lv_all:
+        optimistic: false
+        friendly_name: "Living Room Blinds"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.livingall_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.livingall_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.livingall_stop_middle{% else %}switch.livingall_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.livingall_stop_middle 
+      baby_room:
+        optimistic: false
+        friendly_name: "Baby Room Blinds"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.bedroom2_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.bedroom2_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.bedroom2_stop_middle{% else %}switch.bedroom2_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.bedroom2_stop_middle 
+      master_bedroom:
+        optimistic: false
+        friendly_name: "Master Bedroom Blinds"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.masterbedroom_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.masterbedroom_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.masterbedroom_stop_middle{% else %}switch.masterbedroom_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.masterbedroom_stop_middle 
+      master_bedroom1:
+        optimistic: false
+        friendly_name: "Master Bedroom Left Blind"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.masterbedroom1_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.masterbedroom1_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.masterbedroom1_stop_middle{% else %}switch.masterbedroom1_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.masterbedroom1_stop_middle 
+      master_bedroom2:
+        optimistic: false
+        friendly_name: "Master Bedroom Right Blind"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.masterbedroom2_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.masterbedroom2_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.masterbedroom2_stop_middle{% else %}switch.masterbedroom2_up_down{% endif %}"
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.masterbedroom2_stop_middle 
+      living_windows:
+        optimistic: false
+        friendly_name: "Living Room Window Blinds"
+        open_cover:
+          service: switch.turn_on
+          data:
+            entity_id: switch.living_windows_up_down
+        close_cover:
+          service: switch.turn_off
+          data:                                                       
+            entity_id: switch.living_windows_up_down                          
+        set_cover_position:
+          service_template:  "{% if position < 70 %}switch.turn_off{% else %}switch.turn_on{% endif %}"
+          data_template:
+            entity_id: "{% if position > 30 and position < 70 %}switch.living_windows_stop_middle{% else %}switch.living_windows_up_down{% endif %}"            
+        stop_cover:
+          service: switch.turn_off                                                 
+          data:                                                       
+            entity_id: switch.living_windows_stop_middle 
+
+

@@ -1,0 +1,97 @@
+#  - platform: tplink
+#   host: 192.168.1.205
+# - platform: tplink
+#   host: 192.168.3.106
+  - platform: broadlink
+    host: !secret broadlink_host
+    mac: !secret broadlink_mac
+    switches:
+      tv_lg:
+        friendly_name: "LG Tv Power"
+        command_on: 'JgBYAAABKpIUERMRFDYUERQRFBEUERMRFDYUNhQREzYUNhQ2EzYUNhQRFBEUERM2FBEUERQRFBETNhQ2FDYTEhM2FDYUNRQ2FAAFJgABKkgUAAxWAAEqSBQADQU='
+      blinds_up_down:
+        friendly_name: "Blinds up down"
+        command_on: !secret blinds_up_down_command_on 
+        command_off: !secret blinds_up_down_command_off 
+      blinds_stop_middle:
+        friendly_name: "Blinds stop middle"
+        command_on: !secret blinds_stop_middle_command_on
+        command_off: !secret blinds_stop_middle_command_off
+      ac_on_off:
+        friendly_name: "AC On/Off"
+        command_on: 'dgldJHYJXSStfNMT4+9JAwAAAAAAAAAAAAAAAA=='
+        command_off: 'dgldJHYJXSStfNMT4+9JAwAAAAAAAAAAAAAAAA=='
+      panel1_up_down:
+        friendly_name: "Panel 1 Up Down"
+        command_on: !secret panel1_up_down_command_on
+        command_off: !secret panel1_up_down_command_off
+      panel1_stop_middle:
+        friendly_name: "Panel 1 Stop Middle"
+        command_on: !secret panel1_stop_middle_command_on
+        command_off: !secret panel1_stop_middle_command_off
+      panel2_up_down:
+        friendly_name: "Panel 2 Up Down"
+        command_on: !secret panel2_up_down_command_on
+        command_off: !secret panel2_up_down_command_off
+      panel2_stop_middle:
+        friendly_name: "Panel 2 Stop Middle"
+        command_on: !secret panel2_stop_middle_command_on
+        command_off: !secret panel2_stop_middle_command_off
+      panel3_up_down:
+        friendly_name: "Panel 3 Up Down"
+        command_on: !secret panel3_up_down_command_on
+        command_off: !secret panel3_up_down_command_off
+      panel3_stop_middle:
+        friendly_name: "Panel 3 Stop Middle"
+        command_on: !secret panel3_stop_middle_command_on
+        command_off: !secret panel3_stop_middle_command_off
+      livingall_up_down:
+        friendly_name: "Panel all Up Down"
+        command_on: !secret livingall_up_down_command_on
+        command_off: !secret livingall_up_down_command_off
+      livingall_stop_middle:
+        friendly_name: "Panel all Stop Middle"
+        command_on: !secret livingall_stop_middle_command_on
+        command_off: !secret livingall_stop_middle_command_off
+      bedroom2_up_down:
+        friendly_name: "Baby room up down"
+        command_on: !secret bedroom2_up_down_command_on
+        command_off: !secret bedroom2_up_down_command_off
+      bedroom2_stop_middle:
+        friendly_name: "Baby room stop middle"
+        command_on: !secret bedroom2_stop_middle_command_on
+        command_off: !secret bedroom2_stop_middle_command_off
+      masterbedroom_up_down:
+        friendly_name: "Master bedroom up down"
+        command_on: !secret masterbedroom_up_down_command_on
+        command_off: !secret masterbedroom_up_down_command_off
+      masterbedroom_stop_middle:
+        friendly_name: "Master bedroom stop middle"
+        command_on: !secret masterbedroom_stop_middle_command_on
+        command_off: !secret masterbedroom_stop_middle_command_off
+      masterbedroom1_up_down:
+        friendly_name: "Master bedroom up down"
+        command_on: !secret masterbedroom1_up_down_command_on
+        command_off: !secret masterbedroom1_up_down_command_off
+      masterbedroom1_stop_middle:
+        friendly_name: "Master bedroom stop middle"
+        command_on: !secret masterbedroom1_stop_middle_command_on
+        command_off: !secret masterbedroom1_stop_middle_command_off
+      masterbedroom2_up_down:
+        friendly_name: "Master Bedroom Panel 1 up down"
+        command_on: !secret masterbedroom2_up_down_command_on
+        command_off: !secret masterbedroom2_up_down_command_off
+      masterbedroom2_stop_middle:
+        friendly_name: "Master Bedroom Panel 2 stop middle"
+        command_on: !secret masterbedroom2_stop_middle_command_on
+        command_off: !secret masterbedroom2_stop_middle_command_off
+      living_windows_up_down:
+        friendly_name: "Living room windows up down"
+        command_on: !secret living_windows_up_down_command_on
+        command_off: !secret living_windows_up_down_command_off
+      living_windows_stop_middle:
+        friendly_name: "Living room windows stop middle"
+        command_on: !secret living_windows_stop_middle_command_on
+        command_off: !secret living_windows_stop_middle_command_off
+
+

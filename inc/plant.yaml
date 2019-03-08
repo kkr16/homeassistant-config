@@ -1,0 +1,13 @@
+  anthurium:
+    sensors:
+      moisture: sensor.anthurium_miflora_moisture
+      battery: sensor.anthurium_miflora_battery
+      temperature: sensor.anthurium_miflora_temperature
+      conductivity: sensor.anthurium_miflora_conductivity
+      brightness: sensor.anthurium_miflora_light_intensity
+    min_moisture: 30
+    min_temperature: 15
+    max_temperature: 30
+    min_conductivity: 300
+
+

@@ -1,0 +1,228 @@
+  karim: 
+    name: Karim
+    entities:
+      - device_tracker.karim_pixel
+      - device_tracker.karim_openwrt
+
+  air_quality:
+    name: Air Quality
+    entities:
+      - sensor.waqi_montreal
+      - sensor.waqi_echangeur_decarie_montreal_canada 
+      - sensor.waqi_ontario_montreal_canada
+  luminosity:
+    name: Luminosity
+    entities:
+#     - sensor.lumi_lumisensor_motionaq2_02b43ae4_1_illuminance
+#     - sensor.lumi_lumisensor_motionaq2_0200b803_1_illuminance
+#     - sensor.unknown_lumisensor_motionaq2_0204ae63_1_illuminance
+#     - sensor.lumi_lumisensor_motionaq2_02b48e8e_1_illuminance
+      - sensor.anthurium_miflora_light_intensity
+#     - sensor.livingroom_luminosity
+
+  joanne:                                                         
+    name: Joanne
+    entities:                                                   
+      - device_tracker.joanne_iphone
+      - device_tracker.joanne_unifi
+
+  anthurium:
+    name: Anthurium Plant
+    entities:
+      - sensor.anthurium_miflora_battery
+      - sensor.anthurium_miflora_conductivity
+      - sensor.anthurium_miflora_light_intensity
+      - sensor.anthurium_miflora_moisture
+      - sensor.anthurium_miflora_temperature
+
+  motion: 
+    name: Motion
+    entities:
+      - binary_sensor.bathroom
+      - binary_sensor.kitchen_counter
+      - binary_sensor.kitchen_main
+      - binary_sensor.office
+      - binary_sensor.walkin
+
+  alarm: 
+    name: Alarm 
+    entities: 
+      - alarm_control_panel.total_connect
+      - cover.garage_door
+
+  internet:
+    name: Internet
+    entities:
+      - sensor.speedtest_ping
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+
+  performance:
+    name: System Performance
+    entities:
+      - sensor.load_1m 
+      - sensor.load_5m 
+      - sensor.load_15m 
+      - sensor.processor_use
+      - sensor.memory_use_percent
+#      - sensor.disk_use_percent_
+      - sensor.ssl_cert_expiry
+      - sensor.hass_uptime
+      - sensor.since_last_boot
+
+  power:
+    name: Power
+    entities:
+      - sensor.hydroquebec_balance
+      - sensor.hydroquebec_period_total_bill
+      - sensor.hydroquebec_period_average_temperature
+      - sensor.hydroquebec_yesterday_average_temperature
+      - sensor.hydroquebec_period_length
+      - sensor.hydroquebec_period_total_days
+      - sensor.hydroquebec_period_total_consumption
+      - sensor.hydroquebec_yesterday_total_consumption
+
+  all_users:
+    name: People
+    entities:
+      - device_tracker.karim_pixel
+      - device_tracker.joanne_iphone
+
+  lights:
+    view: yes
+    name: Lights
+    icon: mdi:lightbulb-on-outline
+    entities:
+      - group.kitchen_lights
+      - group.dining_lights
+      - group.master_lights
+      - group.living_lights
+      - group.walkin_lights
+      - group.babyroom_lights
+      - group.office_lights
+      - group.hallway_lights
+      - group.bathroom_lights
+
+  blinds:
+    view: yes
+    name: Blinds
+    icon: mdi:blinds
+    entities:
+      - group.living_blinds
+      - group.babyroom_blinds
+      - group.masterbedroom_blinds
+      - group.group_blinds
+
+
+  security:
+    view: yes
+    name: Security
+    icon: mdi:security-home
+    entities:
+      - alarm_control_panel.total_connect
+      - cover.garage_door
+      - group.motion
+  
+  media:
+    view: yes
+    name: Media
+    icon: mdi:television
+    entities:
+      - group.living_lights
+      - media_player.living_room_2
+      - media_player.living_room
+
+  kitchen_lights:
+    name: Kitchen
+    entities:
+      - light.kitchen_counter_1
+      - light.kitchen_counter_2
+      - light.kitchen_counter_3
+      - light.kitchen_spot_1
+      - light.kitchen_spot_2
+      - light.kitchen_spot_3
+
+  patio:
+    name: Patio
+    entities:
+      - switch.outside_lamp
+
+  bathroom_lights:                        
+    name: Bathroom
+    entities:                            
+      - light.bathroom
+
+  hallway_lights:                        
+    name: Hallway
+    entities:                            
+      - light.hallway_1
+      - light.hallway_2
+      - light.hallway_3                  
+      - light.hallway_4                  
+
+  office_lights:               
+    name: Office
+    entities:                   
+      - light.office_1                  
+      - light.office_2                  
+      - light.office_3         
+
+  dining_lights:
+    name: Dining Room
+    entities:
+#      - light.dining_corner
+
+  master_lights:
+    name: Master Bedroom
+    entities:
+      - light.bedroom
+
+  living_lights:
+    name: Living Room
+    entities:
+      - light.living_room_spot_1
+      - light.living_room_spot_2
+      - light.living_room_spot_3
+
+  babyroom_lights:
+    name: Baby Room Lights
+    entities:
+      - light.baby_room_spot_1
+      - light.baby_room_spot_2
+      - light.baby_room_spot_3
+      - light.baby_room_moon
+      - light.reading_lamp
+
+  walkin_lights:
+    name: Walk in Closet
+    entities:
+      - light.walk_in_1
+      - light.walk_in_2
+      
+  living_blinds:
+    name: Living Room Blinds
+    entities:
+      - cover.back_door
+      - cover.panel_1
+      - cover.panel_2
+      - cover.panel_3
+
+  masterbedroom_blinds:
+    name: Master Bedroom Blinds
+    entities:
+      - cover.master_bedroom1
+      - cover.master_bedroom2
+
+  group_blinds:
+    name: Blind Groups 
+    entities:
+      - cover.master_bedroom
+      - cover.panel_lv_all
+      - cover.living_windows
+
+
+  babyroom_blinds:
+    name: Baby Room Blinds
+    entities:
+      - cover.baby_room
+

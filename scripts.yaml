@@ -1,0 +1,32 @@
+'1549994093018':
+  alias: Start baby nap time
+  sequence:
+  - data:
+      entity_id: light.baby_room_spot_1,light.baby_room_spot_2,light.baby_room_spot_3,light.reading_lamp
+    service: light.turn_off
+  - data:
+      brightness: '1'
+      entity_id: light.baby_room_moon
+    service: light.turn_on
+  - data:
+      entity_id: cover.baby_room
+    service: cover.close_cover
+'1549994731875':
+  alias: End baby nap time
+  sequence:
+  - data:
+      entity_id: cover.baby_room
+    service: cover.open_cover
+  - data:
+      entity_id: light.baby_room_moon
+    service: light.turn_off
+  - data:
+      brightness: '255'
+      entity_id: light.baby_room_spot_1,light.baby_room_spot_2,light.baby_room_spot_3
+    service: light.turn_on
+'1550111926880':
+  alias: Test
+  sequence:
+  - data:
+      entity_id: light.office
+    service: light.turn_on

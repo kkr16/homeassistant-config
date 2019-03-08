@@ -1,0 +1,72 @@
+  - platform: google_travel_time
+    scan_interval: 10
+    name: Work to Home
+    api_key: !secret google_api_key
+    origin: zone.karim_work
+    destination: zone.home
+  - platform: google_travel_time
+    scan_interval: 10
+    name: Karim to Home
+    api_key: !secret google_api_key 
+    origin: device_tracker.karim_pixel
+    destination: zone.home
+  - platform: google_travel_time
+    scan_interval: 10
+    name: Home to Work
+    api_key: !secret google_api_key
+    origin: zone.home
+    destination: zone.karim_work
+  - platform: mqtt
+    state_topic: 'garage/temperature'
+    name: 'Garage Temperature'
+    unit_of_measurement: '°C'
+  - platform: mqtt                            
+    state_topic: 'garage/humidity'         
+    name: 'Garage Humidity'                       
+    unit_of_measurement: '%'                  
+  - platform: miflora
+    mac: !secret miflora_mac
+    name: Anthurium MiFlora
+    force_update: false
+    monitored_conditions:
+      - moisture
+      - light
+      - temperature
+      - conductivity
+      - battery
+  - platform: hydroquebec
+    username: !secret hydroquebec_username
+    password: !secret hydroquebec_password
+    contract: !secret hydroquebec_contract
+    monitored_variables:
+     - period_total_bill
+     - period_length
+     - yesterday_total_consumption
+     - yesterday_average_temperature
+     - period_average_temperature
+     - period_total_days
+     - balance
+     - period_total_consumption
+  - platform: waqi
+    token: !secret waqi_token
+    locations:
+      - montreal
+    stations:
+      - Montreal
+  - platform: template     
+    sensors:
+      joanne_phone_battery:
+        friendly_name: "Joanne Phone Battery"
+        unit_of_measurement: '%'
+        value_template: "{{ state_attr('device_tracker.joanne_iphone', 'battery') }}"
+      karim_phone_battery:
+        friendly_name: "Karim Phone Battery"
+        unit_of_measurement: '%'
+        value_template: "{{ state_attr('device_tracker.karim_pixel', 'battery') }}"
+  - platform: cert_expiry
+    host: !secret cert_host1
+    name: !secret cert_host1
+  - platform: cert_expiry
+    host: !secret cert_host2
+    name: !secret cert_host2
+

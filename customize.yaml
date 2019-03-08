@@ -1,0 +1,113 @@
+switch.blinds_up_down:
+  hidden: true
+switch.blinds_stop_middle:
+  hidden: true
+switch.panel1_up_down:
+  hidden: true
+switch.panel1_stop_middle:
+  hidden: true
+switch.panel2_up_down:
+  hidden: true
+switch.panel2_stop_middle:
+  hidden: true
+switch.panel3_up_down:
+  hidden: true
+switch.panel3_stop_middle:
+  hidden: true
+switch.livingall_up_down:
+  hidden: true
+switch.livingall_stop_middle:
+  hidden: true
+switch.bedroom2_up_down:
+  hidden: true
+switch.bedroom2_stop_middle:
+  hidden: true
+switch.masterbedroom_up_down:
+  hidden: true
+switch.masterbedroom_stop_middle:
+  hidden: true
+switch.masterbedroom1_up_down:
+  hidden: true
+switch.masterbedroom1_stop_middle:
+  hidden: true
+switch.masterbedroom2_up_down:
+  hidden: true
+switch.masterbedroom2_stop_middle:
+  hidden: true
+switch.living_windows_up_down:
+  hidden: true
+switch.living_windows_stop_middle:
+  hidden: true
+sensor.anthurium_miflora_moisture:
+  icon: mdi:water-percent
+sensor.anthurium_miflora_light_intensity:
+  icon: mdi:theme-light-dark
+sensor.anthurium_miflora_battery:
+  icon: mdi:battery
+sensor.anthurium_miflora_conductivity:
+  icon: mdi:flash-outline
+sensor.home_to_work:
+  icon: mdi:traffic-light
+sensor.work_to_home:
+  icon: mdi:traffic-light
+sensor.speedtest_upload:
+  icon: mdi:cloud-upload
+sensor.speedtest_download:
+  icon: mdi:cloud-download
+sensor.ssl_cert_expiry:
+  icon: mdi:security-lock
+switch.outside_lamp:
+  icon: mdi:lightbulb
+cover.garage_door:
+  device_class: garage
+sensor.waqi_anjou_montreal_canada:
+  hidden: true
+sensor.waqi_caserne_17_montreal_canada:
+  hidden: true
+sensor.waqi_chenier_montreal_canada:
+  hidden: true
+sensor.waqi_dorval_montreal_canada:
+  hidden: true
+sensor.waqi_duncan_montreal_canada:
+  hidden: true
+sensor.waqi_ontario_montreal_canada:
+  hidden: true
+sensor.waqi_parc_pilon_montreal_canada:
+  hidden: true
+sensor.waqi_rivieredesprairies_montreal_canada:
+  hidden: true
+sensor.waqi_saintjeanbaptiste_montreal_canada:
+  hidden: true
+sensor.waqi_verdun_montreal_canada:
+  hidden: true
+sensor.waqi_sainteannedebellevue_montreal_canada:
+  hidden: true
+binary_sensor.unknown_lumisensor_motionaq2_0204ae63_1_occupancy:
+  show_last_changed: true
+sensor.waqi_roberval_york_montreal_canada:
+  hidden: true
+weather.yweather: {}
+sensor.garage_humidity:
+  icon: mdi:water-percent
+binary_sensor.office_motion: {}
+binary_sensor.office_occupancy: {}
+script.1549994093018:
+  icon: mdi:sleep
+script.1549994731875:
+  icon: mdi:sleep-off
+image_processing.tensorflow_office_camera:
+  icon: mdi:account
+image_processing.tensorflow_garage_camera:
+  icon: mdi:car
+binary_sensor.baby_in_crib:
+  icon: mdi:baby
+binary_sensor.office_presence:
+  icon: mdi:account
+binary_sensor.car_in_garage:
+  icon: mdi:car
+group.dining_lights:
+  icon: mdi:lightbulb
+switch.dining_room:
+  icon: mdi:lightbulb
+switch.outside_light:
+  icon: mdi:lightbulb

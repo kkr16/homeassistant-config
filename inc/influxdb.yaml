@@ -1,0 +1,7 @@
+  host: 127.0.0.1
+  port: 8086
+  database: homeassistant
+  username: !secret influxdb_username
+  password: !secret influxdb_password
+  default_measurement: state
+

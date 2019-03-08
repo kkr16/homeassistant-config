@@ -1,0 +1,9 @@
+  baby_bedtime_routine:
+    name: Baby's bedtime routine
+    has_date: false
+    has_time: true
+  office_light_motion_timeout:
+    name: Office Light Motion Timeout
+    has_date: false
+    has_time: true
+  

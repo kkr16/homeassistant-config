@@ -1,0 +1,16 @@
+  - platform: mjpeg
+    name: Garage Camera
+    mjpeg_url: ***REMOVED***
+    username: !secret camera_username
+    password: !secret camera_password
+  - platform: mjpeg
+    name: Baby Crib Camera
+    mjpeg_url: ***REMOVED***
+    username: !secret camera_username
+    password: !secret camera_password
+  - platform: mjpeg
+    name: Office Camera
+    mjpeg_url: ***REMOVED***
+    username: !secret camera_username
+    password: !secret camera_password
+

@@ -1,0 +1,14 @@
+  - platform: tensorflow
+    confidence: 50
+    source:
+      - entity_id: camera.garage_camera
+      - entity_id: camera.baby_crib_camera
+      - entity_id: camera.office_camera
+    model:
+      graph: /config/tensorflow/frozen_inference_graph.pb
+      categories:
+        - person
+        - car
+    file_out:
+      - "/config/www/image_processing/{{ camera_entity.split('.')[1] }}_latest.jpg"
+    scan_interval: 15

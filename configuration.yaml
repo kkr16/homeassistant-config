@@ -1,0 +1,138 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 32
+# metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Toronto
+  # Customization file
+  customize: !include customize.yaml
+
+influxdb: !include inc/influxdb.yaml
+
+
+# Enables the frontend
+frontend:
+
+recorder: !include inc/recorder.yaml
+#  purge_keep_days: 5
+
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  base_url: !secret base_url
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+
+api:
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+  google_actions:
+    filter:
+      include_domains:
+        - cover
+      include_entities:
+        - switch.outside_lamp
+        - input_boolean.night_mode
+      exclude_entities:
+        - cover.living_windows
+        - cover.master_bedroom
+        - cover.panel_lv_all
+
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+input_boolean: !include inc/input_boolean.yaml
+
+alarm_control_panel: !include inc/alarm_control_panel.yaml
+
+hue: !include inc/hue.yaml
+
+sensor: !include inc/sensor.yaml
+
+binary_sensor: !include inc/binary_sensor.yaml
+
+mqtt: !include inc/mqtt.yaml
+
+zone: !include inc/zone.yaml
+
+cover: !include inc/cover.yaml
+
+switch: !include inc/switch.yaml
+
+
+device_tracker: !include inc/device_tracker.yaml
+
+notify: !include inc/notify.yaml
+
+homekit: !include inc/homekit.yaml
+
+logger: !include inc/logger.yaml
+
+apple_tv:
+
+camera: !include inc/camera.yaml
+
+plant: !include inc/plant.yaml
+
+weather: !include inc/weather.yaml
+
+#image_processing: !include inc/image_processing.yaml
+
+planifneige: !include inc/planifneige.yaml
+
+ios:
+
+stm:
+
+input_datetime: !include inc/input_datetime.yaml
+
+input_number: !include inc/input_number.yaml
+
+person:
+
+#googlehome: !include inc/googlehome.yaml
+
+tplink: !include inc/tplink.yaml

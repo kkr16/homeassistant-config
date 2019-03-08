@@ -1,0 +1,20 @@
+  - platform: template
+    sensors:
+      baby_in_crib:
+        friendly_name: "Baby in crib"
+        delay_off:
+          minutes: 2
+        value_template: >-
+          {% if states.image_processing.tensorflow_baby_crib_camera.attributes.summary.person %}True{% else %}False{% endif %}
+      car_in_garage:
+        friendly_name: "Car in garage"
+        delay_off:
+          minutes: 2
+        value_template: >-
+          {% if states.image_processing.tensorflow_garage_camera.attributes.summary.car %}True{% else %}False{% endif %}
+      office_presence:
+        friendly_name: "Person in office"
+        delay_off: 
+          minutes: 2
+        value_template: >-
+          {% if states.image_processing.tensorflow_office_camera.attributes.summary.person %}True{% else %}False{% endif %}

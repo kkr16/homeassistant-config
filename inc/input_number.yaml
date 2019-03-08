@@ -1,0 +1,5 @@
+  office_motion_timeout:
+    name: Office Motion Timeout
+    min: 0
+    max: 15 
+    step: 1

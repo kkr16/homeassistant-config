@@ -1,0 +1,11 @@
+  api_key: !secret planif_neige_api_key
+  database_path: /config/planif-neige.db
+  streets:
+    - name: !secret planif_neige_street_name_1
+      streetid: !secret planif_neige_street_id_1
+    - name: !secret planif_neige_street_name_2
+      streetid: !secret planif_neige_street_id_2
+    - name: !secret planif_neige_street_name_3
+      streetid: !secret planif_neige_street_id_3
+    - name: !secret planif_neige_street_name_4
+      streetid: !secret planif_neige_street_id_4

@@ -1,0 +1,10 @@
+  - platform: mqtt_json
+    consider_home: 180
+    devices:
+      karim_pixel: zanzito/karim_pixel/location
+  - platform: unifi
+    host: !secret unifi_host
+    port: 443
+    username: !secret unifi_username
+    password: !secret unifi_password 
+
