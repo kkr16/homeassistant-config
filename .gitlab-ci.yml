@@ -1,0 +1,10 @@
+before_script:
+ - hostname
+
+test:
+  script:
+    - date
+
+deploy:
+  script:
+    - date
