@@ -20,3 +20,4 @@ tts/
 .ios.conf
 .uuid
 *.log
+.gitsecret/keys/random_seed
