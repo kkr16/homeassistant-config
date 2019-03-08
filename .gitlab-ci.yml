@@ -1,8 +1,9 @@
-before_script:
- - hostname
- - whoami
+stages:
+  - test
+  - deploy
 
 test:
+  stage: test
   script:
     - mkdir /tmp/gitlab_runner
     - cd /tmp/gitlab_runner
@@ -10,6 +11,7 @@ test:
     - rm -rf /tmp/gitlab_runner
 
 deploy:
+  stage: deploy
   script:
     - cd /opt/homebase/homeassistant-config
     - git pull
