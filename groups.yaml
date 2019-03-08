@@ -1,9 +1,3 @@
-  karim: 
-    name: Karim
-    entities:
-      - device_tracker.karim_pixel
-      - device_tracker.karim_openwrt
-
   air_quality:
     name: Air Quality
     entities:
@@ -19,12 +13,6 @@
 #     - sensor.lumi_lumisensor_motionaq2_02b48e8e_1_illuminance
       - sensor.anthurium_miflora_light_intensity
 #     - sensor.livingroom_luminosity
-
-  joanne:                                                         
-    name: Joanne
-    entities:                                                   
-      - device_tracker.joanne_iphone
-      - device_tracker.joanne_unifi
 
   anthurium:
     name: Anthurium Plant
@@ -85,8 +73,8 @@
   all_users:
     name: People
     entities:
-      - device_tracker.karim_pixel
-      - device_tracker.joanne_iphone
+      - person.joanne 
+      - person.karim
 
   lights:
     view: yes
