@@ -3,8 +3,14 @@ before_script:
 
 test:
   script:
-    - date
+    - mkdir /tmp/gitlab_runner
+    - cd /tmp/gitlab_runner
+    - git clone git@github.com:kkr16/homeassistant-config.git
+    - rm -rf /tmp/gitlab_runner
 
 deploy:
   script:
-    - date
+    - cd /opt/homebase/homeassistant-config
+    - git pull
+    - sudo docker-compose 
+    - sudo docker-compose restart homeassistant
