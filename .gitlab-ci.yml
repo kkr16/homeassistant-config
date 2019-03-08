@@ -13,5 +13,4 @@ deploy:
   script:
     - cd /opt/homebase/homeassistant-config
     - git pull
-    - sudo docker-compose 
     - sudo docker-compose restart homeassistant
