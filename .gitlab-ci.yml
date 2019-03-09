@@ -15,4 +15,5 @@ deploy:
   script:
     - cd /opt/homebase/homeassistant-config
     - git pull
+    - git secret reveal
     - sudo docker-compose restart homeassistant
