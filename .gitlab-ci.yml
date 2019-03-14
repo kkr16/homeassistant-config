@@ -16,5 +16,4 @@ deploy:
     - cd /opt/homebase/homeassistant-config
     - git pull
     - sudo chown -R $USER:$USER /opt/homebase/homeassistant-config
-    - git secret reveal -f
     - sudo docker-compose restart homeassistant
