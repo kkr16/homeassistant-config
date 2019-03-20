@@ -16,6 +16,18 @@
     api_key: !secret google_api_key
     origin: zone.home
     destination: zone.karim_work
+  - platform: google_travel_time
+    scan_interval: 10
+    name: Joe Home to Work
+    api_key: !secret google_api_key
+    origin: !secret joe_home_address
+    destination: !secret joe_work_address
+  - platform: google_travel_time
+    scan_interval: 10
+    name: Joe Work to Home
+    api_key: !secret google_api_key
+    origin: !secret joe_work_address
+    destination: !secret joe_home_address
   - platform: mqtt
     state_topic: 'garage/temperature'
     name: 'Garage Temperature'
