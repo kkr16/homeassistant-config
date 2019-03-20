@@ -136,3 +136,5 @@ person:
 #googlehome: !include inc/googlehome.yaml
 
 tplink: !include inc/tplink.yaml
+
+system_health:
