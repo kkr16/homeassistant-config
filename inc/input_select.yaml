@@ -1,0 +1,7 @@
+  baby_room_state:
+    name: Baby Room State
+    options:
+      - Sleeping
+      - Napping
+      - Awake
+    icon: mdi:baby

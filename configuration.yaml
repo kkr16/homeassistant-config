@@ -131,6 +131,8 @@ input_datetime: !include inc/input_datetime.yaml
 
 input_number: !include inc/input_number.yaml
 
+input_select: !include inc/input_select.yaml
+
 person:
 
 #googlehome: !include inc/googlehome.yaml
