@@ -1,3 +1,18 @@
   - name: Karim
     platform: pushbullet
     api_key: !secret pushbullet_api_key
+  - name: Google Home
+    platform: rest
+    resource: !secret relay_url
+    method: POST_JSON
+    message_param_name: command
+    data:
+      user: !secret relay_user
+      broadcast: true
+  - name: Google Home Command
+    platform: rest
+    resource: !secret relay_url
+    method: POST_JSON
+    message_param_name: command
+    data:
+      user: !secret relay_user
