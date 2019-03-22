@@ -2,7 +2,8 @@
     name: Baby Room State
     options:
       - Sleeping
-      - Napping
+      - Nightlight
       - Awake
+      - Napping
       - Reading
     icon: mdi:baby
