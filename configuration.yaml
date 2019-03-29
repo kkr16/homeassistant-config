@@ -140,3 +140,5 @@ person:
 tplink: !include inc/tplink.yaml
 
 system_health:
+
+streams:
